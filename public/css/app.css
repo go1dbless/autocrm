@@ -10,7 +10,7 @@ a {
 }
 
 .wrap {
-  width: 1000px;
+  width: 1240px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -152,5 +152,140 @@ a {
 
 .wrap .content .right .main .status-green {
   background: #55ff7c;
+}
+
+.wrap .content .right .main-employ {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrap .content .right .main-employ .employ-card {
+  padding: 10px;
+  min-width: 290px;
+  max-width: 290px;
+  background: #ffe06b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 0 4px 0px black;
+          box-shadow: 0 0 4px 0px black;
+  border-radius: 4px;
+}
+
+.wrap .content .right .main-employ .employ-card .name {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 10px 0;
+  border-top: 1px solid #ceb659;
+  border-bottom: 1px solid #ceb659;
+  padding: 5px 0;
+}
+
+.wrap .content .right .main-employ .employ-card span {
+  margin: 5px 0;
+  border-bottom: 1px solid #565656;
+}
+
+.wrap .content .right .main-employ .employ-card .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px;
+  font-size: 25px;
+  width: 70%;
+}
+
+.wrap .content .right .main-employ .employ-card .buttons li {
+  cursor: pointer;
+}
+
+.wrap .content .right .main-employ .employ-card .comment {
+  margin-top: 5px;
+  text-align: center;
+  color: #525252;
+}
+
+.wrap .content .right .main-employ .new-employ {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #ffe06b;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 300px;
+  z-index: 99999;
+}
+
+.wrap .content .right .main-employ .new-employ span {
+  text-align: center;
+}
+
+.wrap .content .right .main-employ .new-employ input,
+.wrap .content .right .main-employ .new-employ button,
+.wrap .content .right .main-employ .new-employ select {
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+.wrap .content .right .main-employ .false-plank {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.61);
+}
+
+.wrap .content .right .employ-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.wrap .content .right .employ-top button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  background: #00af57;
+  border: none;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.wrap .content .right .employ-top button li {
+  margin-left: 10px;
 }
 

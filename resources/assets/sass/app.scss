@@ -14,7 +14,7 @@ a {
 }
 
 .wrap {
-  width: 1000px;
+  width: 1240px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -67,6 +67,33 @@ a {
 
       .main{
         @import "cards";
+      }
+      .main-employ{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @import "employcard";
+      }
+
+      .employ-top{
+        display: flex;
+        justify-content: flex-end;
+
+        button{
+          display: flex;
+          align-items: center;
+          padding: 10px;
+          background: #00af57;
+          border: none;
+          color: white;
+          font-size: 15px;
+          cursor: pointer;
+
+          li{
+            margin-left: 10px;
+          }
+        }
       }
     }
   }

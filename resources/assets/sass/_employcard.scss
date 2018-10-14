@@ -1,0 +1,71 @@
+.employ-card {
+  padding: 10px;
+  min-width: 290px;
+  max-width: 290px;
+  background: #ffe06b;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  align-items: center;
+  box-shadow: 0 0 4px 0px black;
+  border-radius: 4px;
+
+  .name {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 10px 0;
+    border-top: 1px solid #ceb659;
+    border-bottom: 1px solid #ceb659;
+    padding: 5px 0;
+  }
+  span {
+    margin: 5px 0;
+    border-bottom: 1px solid #565656;
+  }
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    font-size: 25px;
+    width: 70%;
+    li {
+      cursor: pointer;
+    }
+  }
+
+  .comment {
+    margin-top: 5px;
+    text-align: center;
+    color: #525252;
+  }
+}
+
+.new-employ {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffe06b;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  z-index: 99999;
+
+  span{
+    text-align: center;
+  }
+  input, button, select {
+    height: 40px;
+    margin-bottom: 5px;
+  }
+}
+
+.false-plank {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.61);
+}
