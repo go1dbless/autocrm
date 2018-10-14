@@ -6,3 +6,10 @@ Route::get('/active', 'AppController@index');
 Route::get('/stat', 'AppController@index');
 Route::get('/stock', 'AppController@index');
 Route::get('/employ', 'AppController@index');
+
+
+
+Route::post('/save-user', 'UsersController@store');
+
+
+Auth::routes();

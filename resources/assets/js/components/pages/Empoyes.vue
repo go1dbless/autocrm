@@ -1,8 +1,9 @@
 <template>
     <div>
         <div class="employ-top">
-            <button @click="newEployFormVisible = true">
-                Добавить сотрудника <li class="fa fa-plus"></li>
+            <button @click="newEmployFormVisible = true">
+                Добавить сотрудника
+                <li class="fa fa-plus"></li>
             </button>
         </div>
         <div class="main-employ">
@@ -20,23 +21,27 @@
                 <div class="comment">{{u.comment}}</div>
             </div>
 
-            <div class="false-plank" v-if="newEployFormVisible"></div>
-            <div class="new-employ" v-if="newEployFormVisible">
+            <div class="false-plank" v-if="newEmployFormVisible"></div>
+            <div class="new-employ" v-if="newEmployFormVisible">
                 <span>Новый сотрудник</span>
-                <input type="text" class="input" placeholder="ФИО">
-                <select name="post">
+                <input type="text" class="input" placeholder="ФИО" v-model="newUser.name">
+                <input type="text" class="input" placeholder="Логин" v-model="newUser.login">
+                <input type="text" class="password" placeholder="Пароль" v-model="newUser.password">
+                <select name="post" v-model="newUser.post">
                     <option selected disabled>Должность</option>
                     <option value="manager">Менеджер</option>
                 </select>
-                <input type="text" class="input" placeholder="Коментарий">
-                <button>Сохранить</button>
-                <button @click="newEployFormVisible = false">Отмена</button>
+                <input type="text" class="input" placeholder="Коментарий" v-model="newUser.comment">
+                <button @click="saveUser">Сохранить</button>
+                <button @click="newEmployFormVisible = false">Отмена</button>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+    import axios from "axios";
+
     export default {
         data() {
             return {
@@ -50,7 +55,24 @@
                         'status': 'Активен',
                     },
                 ],
-                newEployFormVisible: false
+                newEmployFormVisible: false,
+                newUser: {
+                    name: '',
+                    login: '',
+                    password: '',
+                    comment: '',
+                    post: ''
+                }
+            }
+        },
+        methods: {
+            saveUser() {
+                axios.post('save-user', this.newUser)
+                    .then(
+                        (response) => {
+                            var res = response.data;
+                            console.log(res)
+                        })
             }
         }
     }
