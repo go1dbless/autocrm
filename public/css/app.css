@@ -189,14 +189,14 @@ a {
 .wrap .content .right .main-employ .employ-card .name {
   text-transform: uppercase;
   font-weight: bold;
-  margin: 10px 0;
+  margin: 20px 0;
   border-top: 1px solid #ceb659;
   border-bottom: 1px solid #ceb659;
   padding: 5px 0;
 }
 
 .wrap .content .right .main-employ .employ-card span {
-  margin: 5px 0;
+  margin: 2px 0;
   border-bottom: 1px solid #565656;
 }
 
@@ -217,7 +217,7 @@ a {
 }
 
 .wrap .content .right .main-employ .employ-card .comment {
-  margin-top: 5px;
+  margin-top: 15px;
   text-align: center;
   color: #525252;
 }

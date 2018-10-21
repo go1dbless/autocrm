@@ -10,7 +10,7 @@
             <div class="employ-card" v-for="u in users">
                 <div class="buttons">
                     <li class="fa fa-pencil"></li>
-                    <li class="fa fa-ban"></li>
+                    <li class="fa fa-ban" title="Заблокировать"></li>
                     <li class="fa fa-remove"></li>
                 </div>
                 <div class="name">{{u.name}}</div>
