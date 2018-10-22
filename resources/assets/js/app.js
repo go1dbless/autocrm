@@ -18,7 +18,7 @@ const router = new VueRouter({
         {
             path: '/potential',
             name: 'potential',
-            component: PotentialClients
+            component: PotentialClients,
         },
         {
             path: '/active',
