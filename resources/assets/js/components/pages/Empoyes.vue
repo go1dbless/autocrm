@@ -1,41 +1,43 @@
 <template>
     <div>
-        <div class="employ-top">
-            <button @click="newEmployFormVisible = true">
-                Добавить сотрудника
-                <li class="fa fa-plus"></li>
-            </button>
-        </div>
-        <div class="main-employ">
-            <div class="employ-card" v-for="u in users">
-                <div class="buttons">
-                    <li class="fa fa-pencil"></li>
-                    <li class="fa fa-ban" title="Заблокировать"></li>
-                    <li class="fa fa-remove"></li>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <h4 class="card-title ">Список</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                <tr>
+                                    <th>ФИО</th>
+                                    <th>Должность</th>
+                                    <th>Дата рождения</th>
+                                    <th>Принят</th>
+                                    <th>Статус</th>
+                                    <th>Действие</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                <tr v-for="u in users">
+                                    <td>{{u.name}}</td>
+                                    <td>{{u.post}}</td>
+                                    <td>{{u.birth}}</td>
+                                    <td>{{u.accepted}}</td>
+                                    <td>{{u.status}}</td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-                <div class="name">{{u.name}}</div>
-                <span>{{u.post}}</span>
-                <span>Дата рождения: {{u.birth}}</span>
-                <span>Принят: {{u.accepted}}</span>
-                <span>Статус: {{u.status}}</span>
-                <div class="comment">{{u.comment}}</div>
             </div>
 
-            <div class="false-plank" v-if="newEmployFormVisible"></div>
-            <div class="new-employ" v-if="newEmployFormVisible">
-                <span>Новый сотрудник</span>
-                <input type="text" class="input" placeholder="ФИО" v-model="newUser.name">
-                <input type="text" class="input" placeholder="Логин" v-model="newUser.login">
-                <input type="text" class="password" placeholder="Пароль" v-model="newUser.password">
-                <select name="post" v-model="newUser.post">
-                    <option selected disabled>Должность</option>
-                    <option value="manager">Менеджер</option>
-                </select>
-                <input type="text" class="input" placeholder="Коментарий" v-model="newUser.comment">
-                <button @click="saveUser">Сохранить</button>
-                <button @click="newEmployFormVisible = false">Отмена</button>
-            </div>
         </div>
+
     </div>
 </template>
 

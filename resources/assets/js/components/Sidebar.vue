@@ -11,7 +11,7 @@
 
                 <li class="nav-item" @click="activateRoute('potential')" :class="{active : active == 'potential' }">
                     <router-link class="nav-link" :to="{name:'potential'}">
-                        <i class="material-icons">assignment_indл</i>
+                        <i class="material-icons">assignment_ind</i>
                         <p>Потенциальные клиенты</p>
                     </router-link>
                 </li>
@@ -53,7 +53,7 @@
             }
         },
         mounted() {
-            console.log(this.$router.currentRoute.name);
+            this.activateRoute(this.$router.currentRoute.name);
         },
         methods: {
             activateRoute(name) {
