@@ -1,8 +1,8 @@
 <template>
-    <div class="sidebar" data-color="purple" data-background-color="white">
+    <div class="sidebar" data-color="azure" data-background-color="black" data-image="https://demos.creative-tim.com/material-dashboard/assets/img/sidebar-3.jpg">
 
         <div class="logo">
-            <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+            <a href="#" class="simple-text logo-normal">
                 Autokipr TM
             </a>
         </div>

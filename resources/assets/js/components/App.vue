@@ -6,7 +6,7 @@
         <div class="main-panel">
 
             <!-- Navbar -->
-            <nav-bar-vue title="asdsadq32222"></nav-bar-vue>
+            <nav-bar-vue :title="title"></nav-bar-vue>
             <!-- End Navbar -->
 
             <div class="content">
@@ -32,9 +32,27 @@
         components: {MainPanel, Content_space, Sidebar, NavBarVue, FooterVue},
         data() {
             return {
-                year: new Date().getFullYear(),
-                title:""
+                title: ""
             }
         },
+        methods: {
+            getTitle() {
+              var name = this.$router.currentRoute.name;
+
+              if(name === 'potential') this.title = 'Потенциальные клиенты';
+              if(name === 'active') this.title = 'Действующие клиенты';
+              if(name === 'stat') this.title = 'Статистика';
+              if(name === 'stock') this.title = 'Склад';
+              if(name === 'employ') this.title = 'Сотрудники';
+            }
+        },
+        mounted() {
+            this.getTitle();
+        },
+        watch: {
+            '$route'() {
+                this.getTitle();
+            }
+        }
     }
 </script>
