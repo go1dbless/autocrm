@@ -16343,11 +16343,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
 
 
 
@@ -17552,33 +17547,37 @@ var render = function() {
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-md-12" }, [
-        !_vm.newEmployFormVisible
-          ? _c(
-              "button",
-              {
-                staticClass: "btn btn-info pull-right",
-                attrs: { type: "submit" },
-                on: {
-                  click: function($event) {
-                    _vm.newEmployFormVisible = !_vm.newEmployFormVisible
-                  }
-                }
-              },
-              [_vm._v("Добавить\n                сотрудника\n            ")]
-            )
-          : _vm._e()
-      ])
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-12" }, [
         _c("div", { staticClass: "card" }, [
-          _vm._m(0),
+          _c("div", { staticClass: "card-header card-header-info" }, [
+            _c("h4", { staticClass: "card-title float-left" }, [
+              _vm._v("Все сотрудники")
+            ]),
+            _vm._v(" "),
+            !_vm.newEmployFormVisible
+              ? _c(
+                  "div",
+                  {
+                    staticClass: "cursor-pointer pull-right add-button",
+                    on: {
+                      click: function($event) {
+                        _vm.newEmployFormVisible = !_vm.newEmployFormVisible
+                      }
+                    }
+                  },
+                  [
+                    _vm._v("\n                        Добавить "),
+                    _c("i", { staticClass: "material-icons" }, [
+                      _vm._v("add_box")
+                    ])
+                  ]
+                )
+              : _vm._e()
+          ]),
           _vm._v(" "),
           _c("div", { staticClass: "card-body" }, [
             _c("div", { staticClass: "table-responsive" }, [
               _c("table", { staticClass: "table" }, [
-                _vm._m(1),
+                _vm._m(0),
                 _vm._v(" "),
                 _c(
                   "tbody",
@@ -17618,14 +17617,6 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-header card-header-info" }, [
-      _c("h4", { staticClass: "card-title " }, [_vm._v("Список")])
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -17816,7 +17807,7 @@ exports = module.exports = __webpack_require__(62)(false);
 
 
 // module
-exports.push([module.i, "\n.cursor-pointer {\n    cursor: pointer;\n}\n", ""]);
+exports.push([module.i, "\n.card .card-header .card-title {\n    margin-bottom: 0px;\n}\n.add-button{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    font-size: 16px;\n}\n.cursor-pointer {\n    cursor: pointer;\n}\n", ""]);
 
 // exports
 

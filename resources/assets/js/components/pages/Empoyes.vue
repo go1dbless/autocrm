@@ -53,20 +53,15 @@
             </div>
 
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <button type="submit" class="btn btn-info pull-right"
-                        @click="newEmployFormVisible = !newEmployFormVisible" v-if="!newEmployFormVisible">Добавить
-                    сотрудника
-                </button>
-            </div>
-        </div>
 
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header card-header-info">
-                        <h4 class="card-title ">Список</h4>
+                        <h4 class="card-title float-left">Все сотрудники</h4>
+                        <div class="cursor-pointer pull-right add-button" @click="newEmployFormVisible = !newEmployFormVisible" v-if="!newEmployFormVisible">
+                            Добавить <i class="material-icons">add_box</i>
+                        </div>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -191,6 +186,14 @@
 </script>
 
 <style>
+    .card .card-header .card-title {
+        margin-bottom: 0px;
+    }
+    .add-button{
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+    }
     .cursor-pointer {
         cursor: pointer;
     }
