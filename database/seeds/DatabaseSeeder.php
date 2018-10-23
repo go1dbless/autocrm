@@ -11,6 +11,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        $admin = \App\User::whereLogin('admin')->get();
+        if(!$admin->count()){
+            \App\User::create([
+                'name'=>'Администратор',
+                'login'=>'admin',
+                'password'=>\Illuminate\Support\Facades\Hash::make('admin'),
+                'post'=>'Администратор',
+            ]);
+        }
     }
 }

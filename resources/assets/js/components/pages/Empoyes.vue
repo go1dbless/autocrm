@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="row" v-if="newEmployFormVisible">
+        <div class="row" v-show="newEmployFormVisible">
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
